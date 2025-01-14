@@ -4,7 +4,7 @@ import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
 import Typography from '@mui/material/Typography';
 import CardActionArea from '@mui/material/CardActionArea';
-import Grid from '@mui/material/Grid2'; 
+import Grid from '@mui/material/Grid2';
 import Box from '@mui/material/Box';
 
 import Collage from '../../assets/career img/collage.png';
@@ -16,7 +16,7 @@ import { Margin } from '@mui/icons-material';
 
 const cardData = [
     {
-        image: Collage ,
+        image: Collage,
         title: "Multifaceted Positions and Subspecialties",
         description: "The digital marketing job opportunities available include SEO specialist, content marketer, social media manager, email marketer, PPC manager among others. "
     },
@@ -43,37 +43,37 @@ export default function Career() {
 
         <Box
             sx={{
-                marginTop: {xs:5 ,md:-5},
+                marginTop: { xs: 5, md: -5 },
                 flexGrow: '1',
                 display: 'flex',
                 justifyContent: 'center',
                 alignItems: 'center',
                 minHeight: '100vh',
-                Width: '100vw', 
+                Width: '100vw',
                 textAlign: 'center',
-                marginBottom:10
-                
+                marginBottom: 10
+
             }}
         >
-            <Box sx={{ width: '100%'}}>
-                <Typography gutterBottom variant="h3" component="div" sx={{ fontWeight: 'bold', marginBottom:4}}>
+            <Box sx={{ width: '100%' }}>
+                <Typography gutterBottom variant="h3" component="div" sx={{ fontWeight: 'bold', marginBottom: 4 }}>
                     Careers
                 </Typography>
                 <Typography variant="body2" gutterBottom sx={{
-                    marginBottom: 8, mx:{xs:3,md:15}, fontSize: { xs: '0.9rem', sm: '1rem' },
-                    textAlign:{xs:'justify', md:'center'} 
+                    marginBottom: 8, mx: { xs: 3, md: 15 }, fontSize: { xs: '0.9rem', sm: '1rem' },
+                    textAlign: { xs: 'justify', md: 'center' }
                 }}>
                     Digital marketing refers to a process of marketing brands to people through web-based platforms to achieve customer interaction. It involves tasks such as an SEO specialist, content producer, a social media officer, and data processor—professionals who combine creative and rational thinking. People in this filed always ensure that they innovate in technologies and trends in order to demonstrate the benefits of their innovation on organizational goals and objectives.
                 </Typography>
-            <Grid container spacing={{xs:8, md:10}} justifyContent={'center'} sx={{marginX:{xs:4,xl:12}} }>
-                    {cardData.map((card, index) => ( 
-                        <Grid item xs={12} sm={6} md={4}  key={index}>
+                <Grid container spacing={{ xs: 8, md: 10 }} justifyContent={'center'} sx={{ marginX: { xs: 4, xl: 12 } }}>
+                    {cardData.map((card, index) => (
+                        <Grid item xs={12} sm={6} md={4} key={index}>
                             <Card sx={{
-                                
+
                                 width: '100%',
                                 maxWidth: 520,
                                 minHeight: 440,
-                                height: 'auto', 
+                                height: 'auto',
 
                             }}
                             >
@@ -82,7 +82,7 @@ export default function Career() {
                                         sx={{ objectFit: 'cover' }}
                                         component="img"
                                         height="300"
-                                        image={card.image} 
+                                        image={card.image}
                                         alt={card.title}
                                     />
                                     <CardContent>
