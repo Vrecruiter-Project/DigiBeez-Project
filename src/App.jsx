@@ -2,7 +2,7 @@ import Navbar from './Components/Navbar/Navbar';
 import Carousel from './Components/Carousel/Carousel';
 import AboutDigiBeez from './Components/About/AboutDigiBeez';
 import Grow from './Components/Grow/Grow';
-import Career from './Components/career/Career';
+import Career from "./Components/Career/Career";
 import VisionMission from './Components/VisionandMission/VisionMission';
 import Footer from './Components/Footer/Footer';
 import Form from './Components/Form/Form';
