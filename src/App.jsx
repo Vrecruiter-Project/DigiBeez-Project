@@ -2,7 +2,7 @@ import Navbar from './Components/Navbar/Navbar';
 import Carousel from './Components/Carousel/Carousel';
 import AboutDigiBeez from './Components/About/AboutDigiBeez';
 import Grow from './Components/Grow/Grow';
-import Career from './components/career/career';
+import Career from './Components/career/Career';
 import VisionMission from './Components/VisionandMission/VisionMission';
 import Footer from './Components/Footer/Footer';
 import Form from './Components/Form/Form';
@@ -12,7 +12,7 @@ import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 function App() {
   return (
     <>
-    
+
       <Navbar />
       <Carousel />
       <AboutDigiBeez />
@@ -22,13 +22,13 @@ function App() {
       <Career />
       <Form />
       <Router>
-      <Routes>
+        <Routes>
           <Route path="/term" element={<Terms />} />
         </Routes>
-      
+
         <Footer />
       </Router>
-      
+
     </>
   );
 }

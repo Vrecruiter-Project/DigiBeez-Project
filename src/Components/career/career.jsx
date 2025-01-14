@@ -37,7 +37,7 @@ const cardData = [
     }
 ];
 
-export default function Careers() {
+export default function Career() {
     return (
 
 
