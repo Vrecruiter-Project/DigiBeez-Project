@@ -10,10 +10,10 @@ import {
 import Grid from '@mui/material/Grid2';
 import SEOImage from '../../assets/AboutCardImages/SEO.png';
 import SMMImage from '../../assets/AboutCardImages/SMM.png';
-import DisplayImage from '../../assets/AboutCardImages/Display Marketing.png';
-import ContentImage from '../../assets/AboutCardImages/Content Marketing.png';
+import DisplayImage from '../../assets/AboutCardImages/DisplayMarketing.png';
+import ContentImage from '../../assets/AboutCardImages/ContentMarketing.png';
 import PPCImage from '../../assets/AboutCardImages/PPC.png';
-import EmailImage from '../../assets/AboutCardImages/Email Marketing.png';
+import EmailImage from '../../assets/AboutCardImages/EmailMarketing.png';
 import ORMImage from '../../assets/AboutCardImages/ORM.png';
 
 const cards = [

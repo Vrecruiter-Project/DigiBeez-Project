@@ -9,8 +9,8 @@ import Box from '@mui/material/Box';
 
 import Collage from '../../assets/career img/collage.png';
 import Graph from '../../assets/career img/graph.png';
-import Laptop from '../../assets/career img/person laptop.png';
-import Split_Laptop from '../../assets/career img/split laptop.png';
+import Laptop from '../../assets/career img/personlaptop.png';
+import Split_Laptop from '../../assets/career img/splitlaptop.png';
 import { Margin } from '@mui/icons-material';
 
 
