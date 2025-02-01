@@ -41,7 +41,7 @@ const benefits = [
   },
 ];
 
-const PlacementBenefits = () => {
+const PlacementBenefits = ({onButtonClick}) => {
   return (
     <Container>
     <Box sx={{ textAlign: "center", py: 5 }}>
@@ -72,7 +72,7 @@ const PlacementBenefits = () => {
           </Grid>
         ))}
       </Grid>
-      <Button variant="contained" sx={{ mt: 5 ,    bgcolor: '#FCC41B', color: '#000',}}>
+      <Button onClick={onButtonClick} variant="contained" sx={{ mt: 5 ,    bgcolor: '#FCC41B', color: '#000',}}>
         Book a Free Demo
       </Button>
     </Box>

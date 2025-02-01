@@ -10,7 +10,6 @@ import {
 import Grid2 from '@mui/material/Grid2';
 import hand from '../../../../assets/herosection/hand.png';
 import Support from '../../../../assets/herosection/support.svg'
-import Future from '../../../../assets/herosection/future.svg'
 import Placement from '../../../../assets/herosection/placement.svg'
 import bg from '../../../../assets/herosection/herobg.jpg'
 import Form from '../../Form/Form'

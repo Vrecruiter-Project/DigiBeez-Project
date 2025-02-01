@@ -16,7 +16,7 @@ import { ArrowRight } from "lucide-react";
 export default function Form({btntext="Booking Free Demo Class"}) {
   return (
     <>
-      <form>
+      <form id="" >
         <Typography sx={{ fontSize: '12px' }}>
           Name <span style={{ color: "red" }}>*</span>
         </Typography>
@@ -27,7 +27,8 @@ export default function Form({btntext="Booking Free Demo Class"}) {
 
           size="small"
           sx={{
-            mb: '9px'
+            mb: '9px',
+             bgcolor:'white'
           }}
 
         />
@@ -45,7 +46,7 @@ export default function Form({btntext="Booking Free Demo Class"}) {
           size="small"
           sx={{
             mb: '9px',
-
+ bgcolor:'white'
           }}
 
         />
@@ -53,13 +54,14 @@ export default function Form({btntext="Booking Free Demo Class"}) {
           Phone Number <span style={{ color: "red" }}>*</span>
         </Typography>
         <TextField
-
+        
           fullWidth
           required
           variant="outlined"
           size="small"
           sx={{
-            mb: '9px'
+            mb: '9px',
+            bgcolor:'white'
           }}
 
           InputProps={{

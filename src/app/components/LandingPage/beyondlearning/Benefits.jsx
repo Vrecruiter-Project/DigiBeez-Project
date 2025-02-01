@@ -17,6 +17,7 @@ const benefits2 = [
 
   { icon: <EmojiObjectsIcon sx={{ fontSize: 40, color: "#FF9800" }} />, title: "Soft skills", desc: "Master communication and salary negotiation skills." },
   { icon: <PeopleIcon sx={{ fontSize: 40, color: "#E91E63" }} />, title: "Interview preparation", desc: "Mock interviews and expert sessions and more." },
+
 ];
 
 const Benefits = () => {
