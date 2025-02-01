@@ -30,7 +30,8 @@ export default function Home() {
       <PlansAndPricing />
       <RequestCall />
       <FAQ />
-      <Footer/>
+      <Footer />
+      HAR HAR MAHADEV
     </>
   )
 }
