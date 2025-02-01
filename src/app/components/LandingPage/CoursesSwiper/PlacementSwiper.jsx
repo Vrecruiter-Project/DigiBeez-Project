@@ -94,7 +94,7 @@ const PlacementSwiper = ({ placementItems }) => {
                   width: "13em",
                  // height: "100%",
                   borderRadius: 2,
-                  boxShadow: "0px 4px 1px rgba(0, 0, 0, 0.4)",
+                  boxShadow: "0px 4px 1px rgba(0.4, 0.4, 0.4, 0.4)",
                   mt:2
                 }}
               >
