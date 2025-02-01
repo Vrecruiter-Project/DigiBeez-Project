@@ -63,7 +63,7 @@ const VisionMission = () => {
         digital. Our goal is to deliver exceptional results, helping clients
         gain customers, followers, and sales through tailored solutions. With a
         commitment to innovation and strong, trust-based relationships, we
-        strive to meet client demands and drive sustainable success.
+        strive to meet client demands and drive sustainable success. HELLO HARIOM
       </Typography>
 
       {sections.map((section, index) => (
