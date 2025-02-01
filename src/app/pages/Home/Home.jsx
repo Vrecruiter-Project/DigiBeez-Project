@@ -31,7 +31,6 @@ export default function Home() {
       <RequestCall />
       <FAQ />
       <Footer />
-      HAR HAR MAHADEV
     </>
   )
 }
