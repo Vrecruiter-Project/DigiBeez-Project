@@ -2,17 +2,25 @@ import React from 'react';
 import Grid from '@mui/material/Grid2'
 import { Box, Button, Container, Typography } from '@mui/material';
 import PlacementSwiper from '../CoursesSwiper/PlacementSwiper';
-//import flagImg from "../../../../assets/herosection/flag.png";
+import videoeidt from '../../../../assets/Brochurepdf/videoeditingcoursesyllabus.pdf';
+import webdev from '../../../../assets/Brochurepdf/webdevelopmentcourse syllabus.pdf';
+import webdesign from '../../../../assets/Brochurepdf/webdesigning.pdf';
+import Graphicdesign from '../../../../assets/Brochurepdf/graphicdesignsyllabus.pdf';
+import uiux from '../../../../assets/Brochurepdf/webdesigning.pdf';
+import digmark from '../../../../assets/Brochurepdf/Digitalmarketing.pdf';
 
 const Coursebrocher = () => {
+
   const buttonContent = [
-    "Download Web Development brochure",
-    "Download Web Designing brochure",
-    "Download Graphic Designing brochure",
-    "Download Video Editing brochure",
-    "Download Digital Marketing brochure",
-    "Download UI/UX Designing brochure",
-  ]
+
+    { label: "Download Web Development brochure", file: webdev },
+    { label: "Download Web Designing brochure", file: webdesign },
+    { label: "Download Graphic Designing brochure", file: Graphicdesign },
+    { label: "Download Video Editing brochure", file: videoeidt },
+    { label: "Download Digital Marketing brochure", file: digmark },
+    { label: "Download UI/UX Designing brochure", file: uiux }
+
+  ];
 
   const placementItems = [
     {
@@ -64,20 +72,23 @@ const Coursebrocher = () => {
           <Grid container>
             {buttonContent.map((item, id) => (
               <Grid size={{ xs: 12, sm: 6, md: 4 }} key={id}>
-                <Button sx={{
-                  background: "#1E1E1E",
-                  color: "white",
-                  boxShadow: "revert",
-                  width: "95%",
-                  p: 1.5,
-                  mt: 3,
-                  borderRadius: 3
-                }}>
-                  {item}
-                </Button>
+                <a href={item.file} download style={{ textDecoration: 'none' }}>
+                  <Button sx={{
+                    background: "#1E1E1E",
+                    color: "white",
+                    boxShadow: "revert",
+                    width: "95%",
+                    p: 1.5,
+                    mt: 3,
+                    borderRadius: 3
+                  }}>
+                    {item.label}
+                  </Button>
+                </a>
               </Grid>
             ))}
           </Grid>
+
           <Grid container sx={{ mt: 6 }}>
             <Grid size={12}>
               <Typography sx={{

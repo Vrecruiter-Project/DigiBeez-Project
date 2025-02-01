@@ -30,11 +30,11 @@ const instructors = [
     teaches: ["Blocks in C++", "Basics of Java", "Basics of Python"],
     linkedIn: "",
     companies: ["Google", "IIIT"],
-    
+
   },
 ];
 
-const Learners = () => {
+const Learners = ({onButtonClick}) => {
   return (
     <Container>
       <Box sx={{ textAlign: "center", my: 9 }}>
@@ -44,7 +44,7 @@ const Learners = () => {
 
         <Grid container spacing={3} justifyContent="center">
           {instructors.map((instructor, index) => (
-            <Grid  key={index} size ={{xs:12, sm:6, md:4}}>
+            <Grid key={index} size={{ xs: 12, sm: 6, md: 4 }}>
               <Card sx={{ height: 400, mx: "auto", p: 2, textAlign: "center", boxShadow: 3, display: "flex", flexDirection: "column", justifyContent: "space-between" }}>
                 <CardMedia
                   component="img"
@@ -60,7 +60,7 @@ const Learners = () => {
                     {instructor.role}
                   </Typography>
 
-                  <Grid container spacing={1} sx={{ justifyContent: "center" , my: 1}}>
+                  <Grid container spacing={1} sx={{ justifyContent: "center", my: 1 }}>
                     {instructor.companiesimg.map((subject, i) => (
                       <Grid key={i}>
                         <img src={subject} alt={subject} style={{ width: 20, height: 20 }} />
@@ -90,7 +90,7 @@ const Learners = () => {
           ))}
         </Grid>
 
-        <Button variant="contained" sx={{ mt: 5, bgcolor: '#FCC41B', color: '#000', }}>
+        <Button onClick={onButtonClick} variant="contained" sx={{ mt: 4, bgcolor: '#FCC41B', color: '#000', }}>
           Book a Free Demo
         </Button>
       </Box>

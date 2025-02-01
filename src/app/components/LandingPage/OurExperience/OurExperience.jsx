@@ -10,7 +10,7 @@ const data = [
     { label: "Others", percentage: "6%", color: "#8A2BE2", size: 100 },
 ];
 
-const OurExperience = () => {
+const OurExperience = ({ onButtonClick }) => {
     return (
         <Box sx={{ textAlign: "center", p: 4 }}>
             <Typography variant="h4" fontWeight="bold" sx={{ fontSize: { xs: "1.7rem", md: "2rem" }, mb: 4 }}>
@@ -27,12 +27,12 @@ const OurExperience = () => {
                     gap: 2,
                 }}
             >
-                <Grid container spacing={2} justifyContent="center" sx={{ borderRadius: 20, p: {md:8}, background: "#121212" }}>
+                <Grid container spacing={2} justifyContent="center" sx={{ borderRadius: 20, p: { md: 8 }, background: "#121212" }}>
                     {data.map((item, index) => (
-                        <Grid key={index} item ={{xs:12, sm:6, md:4, lg:4}} display="flex" justifyContent="center" sx={{padding:"9px"}}>
+                        <Grid key={index} item={{ xs: 12, sm: 6, md: 4, lg: 4 }} display="flex" justifyContent="center" sx={{ padding: "9px" }}>
                             <Box
                                 sx={{
-                                    
+
                                     width: item.size,
                                     height: item.size,
                                     borderRadius: "50%",
@@ -42,7 +42,7 @@ const OurExperience = () => {
                                     alignItems: "center",
                                     justifyContent: "center",
                                     borderLeft: `4px solid ${item.color}`,
-                                   
+
                                     color: "#fff",
                                     transition: "box-shadow 0.3s ease-in-out",
                                     ":hover": {
@@ -59,7 +59,7 @@ const OurExperience = () => {
                     ))}
                 </Grid>
             </Box>
-            <Button variant="contained" sx={{ mt: 4, bgcolor: "#FCC41B", color: "#000" }}>
+            <Button onClick={onButtonClick} variant="contained" sx={{ mt: 4, bgcolor: '#FCC41B', color: '#000', }}>
                 Book a Free Demo
             </Button>
         </Box>

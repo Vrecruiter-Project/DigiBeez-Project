@@ -14,22 +14,30 @@ import FAQ from '../../components/LandingPage/Faq/Faq';
 import Footer from '../../components/LandingPage/Footer/Footer';
 
 export default function Home() {
+
+  const scrollToForm = () => {
+    const formSection = document.getElementById('formSection');
+    if (formSection) {
+      formSection.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
   return (
     <>
-      <Navbar />
+      <Navbar onButtonClick={scrollToForm}/>
       <Herosection />
       <Coursebrocher />
-      <PlacementBenefits />
+      <PlacementBenefits onButtonClick={scrollToForm} />
       <div className='bg-black'>
-      <CourseBenefits />
-      <Benefits />
-      <Trustlove />
+        <CourseBenefits />
+        <Benefits />
+        <Trustlove onButtonClick={scrollToForm} />
       </div>
-      <Learners />
-      <OurExperience />
+      <Learners onButtonClick={scrollToForm} />
+      <OurExperience onButtonClick={scrollToForm} />
       <PlansAndPricing />
       <RequestCall />
-      <FAQ />
+      <FAQ onButtonClick={scrollToForm} />
       <Footer />
     </>
   )
