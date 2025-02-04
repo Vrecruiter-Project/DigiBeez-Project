@@ -1,22 +1,16 @@
-
 import RadioGroup from '@mui/material/RadioGroup';
 import FormControlLabel from '@mui/material/FormControlLabel';
 import FormControl from '@mui/material/FormControl';
 import Radio from '@mui/material/Radio';
-import flag from '../../../assets/herosection/flag.png'
-import {
-  Button,
-  InputAdornment,
-  TextField,
-  Typography,
-} from "@mui/material";
+import flag from '../../../assets/herosection/flag.png';
+import { Button, InputAdornment, TextField, Typography } from "@mui/material";
 import { ArrowRight } from "lucide-react";
 import React, { useRef } from 'react';
 import emailjs from '@emailjs/browser';
-
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 export default function Form({ btntext = "Booking Free Demo Class" }) {
-  
   const form = useRef();
 
   const sendEmail = (e) => {
@@ -28,18 +22,18 @@ export default function Form({ btntext = "Booking Free Demo Class" }) {
       })
       .then(
         () => {
-          console.log('SUCCESS!');
-          console.log("Message Sent!");
-          
+          toast.success("Message Sent Successfully!");
+          form.current.reset();
         },
         (error) => {
+          toast.error("Failed to send message. Please try again.");
           console.log('FAILED...', error.text);
-        },
+        }
       );
   };
-
   return (
     <>
+      <ToastContainer />
       <form ref={form} onSubmit={sendEmail}>
         <Typography sx={{ fontSize: '12px' }}>
           Name <span style={{ color: "red" }}>*</span>
@@ -52,7 +46,7 @@ export default function Form({ btntext = "Booking Free Demo Class" }) {
           size="small"
           sx={{
             mb: '9px',
-             bgcolor:'white'
+            bgcolor: 'white'
           }}
 
         />
@@ -71,7 +65,7 @@ export default function Form({ btntext = "Booking Free Demo Class" }) {
           size="small"
           sx={{
             mb: '9px',
- bgcolor:'white'
+            bgcolor: 'white'
           }}
 
         />
@@ -79,7 +73,7 @@ export default function Form({ btntext = "Booking Free Demo Class" }) {
           Phone Number <span style={{ color: "red" }}>*</span>
         </Typography>
         <TextField
-        
+
           fullWidth
           required
           variant="outlined"
@@ -87,7 +81,7 @@ export default function Form({ btntext = "Booking Free Demo Class" }) {
           name='phone'
           sx={{
             mb: '9px',
-            bgcolor:'white'
+            bgcolor: 'white'
           }}
 
           InputProps={{
@@ -160,6 +154,5 @@ export default function Form({ btntext = "Booking Free Demo Class" }) {
   )
 }
 
-  
 
- 
+
