@@ -1,4 +1,4 @@
-import React from 'react'
+
 import RadioGroup from '@mui/material/RadioGroup';
 import FormControlLabel from '@mui/material/FormControlLabel';
 import FormControl from '@mui/material/FormControl';
@@ -11,12 +11,36 @@ import {
   Typography,
 } from "@mui/material";
 import { ArrowRight } from "lucide-react";
+import React, { useRef } from 'react';
+import emailjs from '@emailjs/browser';
 
 
-export default function Form({btntext="Booking Free Demo Class"}) {
+export default function Form({ btntext = "Booking Free Demo Class" }) {
+  
+  const form = useRef();
+
+  const sendEmail = (e) => {
+    e.preventDefault();
+
+    emailjs
+      .sendForm('service_2sjl85a', 'template_eccsi2r', form.current, {
+        publicKey: 'Zmj5fZSb1S1YffATj',
+      })
+      .then(
+        () => {
+          console.log('SUCCESS!');
+          console.log("Message Sent!");
+          
+        },
+        (error) => {
+          console.log('FAILED...', error.text);
+        },
+      );
+  };
+
   return (
     <>
-      <form id="" >
+      <form ref={form} onSubmit={sendEmail}>
         <Typography sx={{ fontSize: '12px' }}>
           Name <span style={{ color: "red" }}>*</span>
         </Typography>
@@ -24,7 +48,7 @@ export default function Form({btntext="Booking Free Demo Class"}) {
 
           fullWidth
           required
-
+          name="name"
           size="small"
           sx={{
             mb: '9px',
@@ -42,6 +66,7 @@ export default function Form({btntext="Booking Free Demo Class"}) {
           fontSize='12px'
           fullWidth
           required
+          name='email'
           variant="outlined"
           size="small"
           sx={{
@@ -59,6 +84,7 @@ export default function Form({btntext="Booking Free Demo Class"}) {
           required
           variant="outlined"
           size="small"
+          name='phone'
           sx={{
             mb: '9px',
             bgcolor:'white'
@@ -96,6 +122,7 @@ export default function Form({btntext="Booking Free Demo Class"}) {
               <FormControlLabel
                 key={`experience-${index}`}
                 value={option}
+                name='experience'
                 control={<Radio />}
                 label={
                   <Typography sx={{ fontSize: { xs: "0.8rem", sm: "0.85rem", lg: "0.9rem" }, fontWeight: "medium" }}>
@@ -112,7 +139,7 @@ export default function Form({btntext="Booking Free Demo Class"}) {
           type="submit"
           fullWidth
           variant="contained"
-
+          value="send"
 
           sx={{
             mt: 2,
@@ -132,3 +159,7 @@ export default function Form({btntext="Booking Free Demo Class"}) {
     </>
   )
 }
+
+  
+
+ 
