@@ -39,7 +39,6 @@ export default function Home() {
       <RequestCall />
       <FAQ onButtonClick={scrollToForm} />
       <Footer />
-      <h1>Bolo Hariom</h1>
     </>
   )
 }
