@@ -10,6 +10,7 @@ import {
 import Grid2 from '@mui/material/Grid2';
 import hand from '../../../../assets/herosection/hand.png';
 import Support from '../../../../assets/herosection/support.svg'
+import Future from '../../../../assets/herosection/future.svg'
 import Placement from '../../../../assets/herosection/placement.svg'
 import bg from '../../../../assets/herosection/herobg.jpg'
 import Form from '../../Form/Form'
@@ -51,11 +52,11 @@ export default function Herosection() {
                 Full Stack Web Development Job Bootcamp
               </Typography>
               <Typography variant="body1" mt={2} color="white">
-                Choose MERN stack or Spring Boot and acquire expertise through
+                Choose MERN stack acquire expertise <br /> through
                 practical application and real-world projects.
               </Typography>
 
-              <Box display="flex" flexWrap="wrap"  gap={2} mt={2}>
+              <Box display="flex" flexWrap="wrap" gap={2} mt={2}>
                 {[
                   { icon: Support, text: "Placement assistance" },
                   // { icon: Future, text: "AI-infused curriculum" },
