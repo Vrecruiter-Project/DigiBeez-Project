@@ -63,9 +63,7 @@ const PlacementSwiper = ({ placementItems }) => {
                 sx={{
                   p: 2,
                   width: "13em",
-              
                   borderRadius: 2,
-                  boxShadow: "0px 4px 1px rgba(0.4, 0.4, 0.4, 0.4)",
                 }}
               >
                 <Grid container  >
@@ -86,41 +84,7 @@ const PlacementSwiper = ({ placementItems }) => {
 
                 </Grid>
               </Card>
-             
-
-              <Card
-                sx={{
-                  p: 2,
-                  width: "13em",
-                 // height: "100%",
-                  borderRadius: 2,
-                  boxShadow: "0px 4px 1px rgba(0.4, 0.4, 0.4, 0.4)",
-                  mt:2
-                }}
-              >
-                <Grid container  >
-                  <Grid size={6} >
-                    <img style={{
-                      borderRadius: "50%",
-                      height: "100%",
-                    }} src={item.image} alt={item.details} />
-                  </Grid>
-                  <Grid size={6}>
-                    <Grid size={10}>
-                      <img  src={item.compimage} alt={item.details} />
-                    </Grid>
-                    <Grid size={12}>
-                      <Typography>{item.details}</Typography>
-                    </Grid>
-                  </Grid>
-
-                </Grid>
-              </Card>
-              
-            </Box>
-
-            
-            
+            </Box>  
           ))}
         </div>
       </div>

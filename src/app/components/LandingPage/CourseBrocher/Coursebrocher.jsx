@@ -114,6 +114,8 @@ const Coursebrocher = () => {
               </Grid>
             ))}
           </Grid>
+
+
           <Grid container sx={{ mt: 6 }}>
             <Grid size={12}>
               <Typography sx={{
