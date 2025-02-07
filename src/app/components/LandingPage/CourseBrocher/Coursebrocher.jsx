@@ -2,16 +2,19 @@ import React from 'react';
 import Grid from '@mui/material/Grid2'
 import { Box, Button, Container, Typography } from '@mui/material';
 import PlacementSwiper from '../CoursesSwiper/PlacementSwiper';
-// import flagImg from "../../../../assets/herosection/flag.png";
-import video from '../../../../assets/Brochurepdf/videoeditingcoursesyllabus.pdf'
+import video from '../../../../assets/Brochurepdf/videoeditingcoursesyllabus.pdf';
+import webdev from '../../../../assets/Brochurepdf/webDevelopmentcoursesyllabus.pdf';
+import graphic from '../../../../assets/Brochurepdf/GRAPHICDESIGNCOURSESYLLABUS.pdf';
+import webdes from '../../../../assets/Brochurepdf/WebDesigningCourse.pdf';
+import digmar from '../../../../assets/Brochurepdf/DigitalMarketing.pdf';
 const Coursebrocher = () => {
   const buttonContent = [
-    { label: "Download Web Development brochure", file: '' },
-    { label: "Download Web Designing brochure", file: "/brochures/web-designing.pdf" },
-    { label: "Download Graphic Designing brochure", file: "/brochures/graphic-designing.pdf" },
+    { label: "Download Web Development brochure", file: webdev },
+    { label: "Download Web Designing brochure", file: webdes },
+    { label: "Download Graphic Designing brochure", file: graphic },
     { label: "Download Video Editing brochure", file: video },
-    { label: "Download Digital Marketing brochure", file: "/brochures/digital-marketing.pdf" },
-    { label: "Download UI/UX Designing brochure", file: "/brochures/ui-ux-designing.pdf" }
+    { label: "Download Digital Marketing brochure", file: digmar },
+    { label: "Download UI/UX Designing brochure", file: webdes }
   ];
 
   const placementItems = [
