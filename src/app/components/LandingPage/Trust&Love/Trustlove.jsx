@@ -53,7 +53,7 @@ function a11yProps(index) {
   };
 }
 
-export default function TrustLove() {
+export default function TrustLove({ onButtonClick } ) {
   const theme = useTheme();
   const [value, setValue] = React.useState(0);
 
@@ -400,7 +400,7 @@ export default function TrustLove() {
           </Grid>
 
         </TabPanel>
-        <Button variant="contained" sx={{ mt: 4, bgcolor: '#FCC41B', color: '#000', }}>
+        <Button onClick={onButtonClick} variant="contained" sx={{ mt: 4, bgcolor: '#FCC41B', color: '#000', }}>
           Book a Free Demo
         </Button>
       </Box >

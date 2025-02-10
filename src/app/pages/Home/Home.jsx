@@ -11,6 +11,7 @@ import Benefits from '../../components/LandingPage/beyondlearning/Benefits';
 import PlansAndPricing from '../../components/LandingPage/Plans/Plans';
 import RequestCall from '../../components/LandingPage/RequestCall/RequestCall';
 import FAQ from '../../components/LandingPage/Faq/Faq';
+import Certificatee from '../../components/Certificate/Certificate';
 import Footer from '../../components/LandingPage/Footer/Footer';
 
 export default function Home() {
@@ -24,7 +25,7 @@ export default function Home() {
 
   return (
     <>
-      <Navbar onButtonClick={scrollToForm}/>
+      <Navbar onButtonClick={scrollToForm} />
       <Herosection />
       <Coursebrocher />
       <PlacementBenefits onButtonClick={scrollToForm} />
@@ -38,6 +39,7 @@ export default function Home() {
       <PlansAndPricing />
       <RequestCall />
       <FAQ onButtonClick={scrollToForm} />
+      <Certificatee />
       <Footer />
     </>
   )
