@@ -1,6 +1,6 @@
 
 import React from "react";
-import Certificate from '../../../assets/Certificate/certificate.png';
+import Certificate from '../../../assets/Certificate/Certificate.png';
 import { Container } from "@mui/material";
 
 const Certificatee = () => {
