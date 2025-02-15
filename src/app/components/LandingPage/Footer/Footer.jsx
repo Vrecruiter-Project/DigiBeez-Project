@@ -73,7 +73,7 @@ const Footer = () => {
           {/* Community Section */}
           <Grid item xs={12} sm={3}>
             <Typography variant="h6" gutterBottom>
-              Community
+              Community hello
             </Typography>
             {[
               "10X Club",
