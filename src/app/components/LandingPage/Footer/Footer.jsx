@@ -1,15 +1,21 @@
 import React from "react";
-import { Container, Typography, Link, Box, IconButton } from "@mui/material";
+import { Container, Typography, Link, Box, IconButton, Grid } from "@mui/material";
 import { Email, Phone, Instagram, Facebook, LinkedIn, Twitter, YouTube } from "@mui/icons-material";
-import Grid from "@mui/material/Grid2";
+import { keyframes } from "@mui/system";
+
+// Keyframe animation for the gradient text effect
+const typing = keyframes`
+  0% { background-position: -100% }
+  100% { background-position: 400% }
+`;
 
 const Footer = () => {
   return (
     <Box sx={{ bgcolor: "#2e1f19", color: "white", py: 5, mt: 5 }}>
-      <Container sx={{}}>
+      <Container>
         <Grid container spacing={4}>
           {/* Contact Section */}
-          <Grid size={{xs:12, sm:3}}>
+          <Grid item xs={12} sm={3}>
             <Typography variant="h6" gutterBottom>
               <b>digibeez</b>
             </Typography>
@@ -23,7 +29,7 @@ const Footer = () => {
           </Grid>
 
           {/* Company Section */}
-          <Grid size ={{xs:12, sm:3}}>
+          <Grid item xs={12} sm={3}>
             <Typography variant="h6" gutterBottom>
               digibeez
             </Typography>
@@ -45,7 +51,7 @@ const Footer = () => {
           </Grid>
 
           {/* Courses Section */}
-          <Grid size ={{xs:12, sm:3}}>
+          <Grid item xs={12} sm={3}>
             <Typography variant="h6" gutterBottom>
               Courses
             </Typography>
@@ -65,7 +71,7 @@ const Footer = () => {
           </Grid>
 
           {/* Community Section */}
-          <Grid size ={{xs:12, sm:3}}>
+          <Grid item xs={12} sm={3}>
             <Typography variant="h6" gutterBottom>
               Community
             </Typography>
@@ -97,9 +103,38 @@ const Footer = () => {
           <Typography variant="body1">Copyright © digibeez. All rights reserved</Typography>
         </Box>
       </Container>
+
+      {/* Gradient Background & Animated Text */}
+      <Box
+        sx={{
+          display: "flex",
+          justifyContent: "center",
+          alignItems: "center",
+          height: "40vh",
+          backgroundColor: "##2e1f19",
+        }}
+      >
+        <Typography
+          variant="h1"
+          fontWeight="bold"
+          sx={{
+            display: "inline-block",
+            position: "relative",
+            backgroundRepeat: "no-repeat",
+            backgroundSize: "200% auto",
+            WebkitBackgroundClip: "text",
+            WebkitTextFillColor: "transparent",
+            fontSize: "200px",
+            whiteSpace: "nowrap",
+            backgroundImage: "radial-gradient(circle, #000 10%, #D9D9D9 50%, #000 90%)",
+            animation: `${typing} 4s linear infinite`,
+          }}
+        >
+          Digibeez
+        </Typography>
+      </Box>
     </Box>
   );
 };
 
 export default Footer;
-
