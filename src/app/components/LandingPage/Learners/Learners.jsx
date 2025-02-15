@@ -31,7 +31,7 @@ const instructors = [
   },
 ];
 
-const Learners = () => {
+const Learners = ({ onButtonClick }) => {
   return (
     <Container>
       <Box sx={{ textAlign: "center", my: 9 }}>
@@ -97,7 +97,7 @@ const Learners = () => {
           ))}
         </Grid>
 
-        <Button variant="contained" sx={{ mt: 5, bgcolor: "#FCC41B", color: "#000" }}>
+        <Button onClick={onButtonClick} variant="contained" sx={{ mt: 5, bgcolor: '#FCC41B', color: '#000', }}>
           Book a Free Demo
         </Button>
       </Box>
